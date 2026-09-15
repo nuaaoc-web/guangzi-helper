@@ -1,0 +1,38 @@
+appId: com.guangzi.helper
+productName: 广子填报助手
+asar: true
+directories:
+  output: release
+  buildResources: build
+copyright: Copyright © 2026
+files:
+  - dist
+  - dist-electron
+  - package.json
+  - node_modules
+mac:
+  category: public.app-category.productivity
+  target:
+    - dmg
+    - zip
+  icon: build/icon.icns
+win:
+  target:
+    - nsis
+    - portable
+  icon: build/icon.ico
+linux:
+  target:
+    - AppImage
+    - deb
+  category: Office
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: 广子填报助手
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/
+  
+publish: null
